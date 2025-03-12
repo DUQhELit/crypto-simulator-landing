@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,19 +11,21 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            text-align: center;
         }
 
         header {
             background-color: #4caf50;
             color: white;
-            padding: 20px;
-            text-align: center;
+            padding: 30px;
+            font-size: 22px;
         }
 
         .container {
-            width: 80%;
+            width: 90%;
+            max-width: 800px;
             margin: auto;
-            overflow: hidden;
+            padding: 20px;
         }
 
         section {
@@ -37,29 +38,35 @@
 
         h2 {
             color: #4caf50;
+            font-size: 22px;
         }
 
-        .features, .benefits, .download, .steps {
+        ul, ol {
             list-style-type: none;
             padding: 0;
+            text-align: left;
+            display: inline-block;
+            margin: auto;
         }
 
-        .features li, .benefits li, .steps li {
+        ul li, ol li {
             margin: 10px 0;
             padding: 10px;
             background: #e8f5e9; /* Light green */
             border-left: 5px solid #4caf50;
+            width: 100%;
         }
 
         .cta {
             background-color: #4caf50;
             color: white;
-            padding: 15px;
+            padding: 15px 20px;
             text-align: center;
             border-radius: 8px;
             text-decoration: none;
+            font-size: 18px;
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 15px;
         }
 
         .cta:hover {
@@ -68,26 +75,26 @@
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             background-color: #333;
             color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            font-size: 14px;
         }
     </style>
 </head>
 
 <body>
+
     <header>
-        <h1>🚀 Master Crypto Trading Without Risk!</h1>
+        🚀 Master Crypto Trading Without Risk!  
         <p>Learn, practice, and master crypto trading strategies in a safe, risk-free environment.</p>
     </header>
 
     <div class="container">
+
         <section>
             <h2>🔹 Key Features</h2>
-            <ul class="features">
+            <ul>
                 <li>✅ Real-Time Market Simulation – Trade with live crypto prices</li>
                 <li>✅ Copy Trading – Follow expert traders and mirror their strategies</li>
                 <li>✅ Portfolio Management – Track your simulated investments and analyze performance</li>
@@ -98,7 +105,7 @@
 
         <section>
             <h2>📲 Why Choose Cryptocurrency Simulator?</h2>
-            <ul class="benefits">
+            <ul>
                 <li>🌎 Trade Crypto Without Risk – No real money required, learn the market safely</li>
                 <li>💡 Learn Copy Trading – See how professional traders operate</li>
                 <li>📊 Optimize Your Strategy – Test different trading strategies before using real funds</li>
@@ -108,13 +115,13 @@
 
         <section>
             <h2>📥 Download Now</h2>
-            <p>🔗 Available on the App Store & Google Play</p>
+            <p>🔗 Available on the <strong>App Store</strong> & <strong>Google Play</strong></p>
             <a class="cta" href="#" onclick="alert('Redirecting to App Store and Google Play!');">Click Here to Start Trading Smarter Today!</a>
         </section>
 
         <section>
             <h2>🚀 Get Started in Seconds!</h2>
-            <ol class="steps">
+            <ol>
                 <li>1️⃣ Download the App</li>
                 <li>2️⃣ Set Up Your Virtual Portfolio</li>
                 <li>3️⃣ Start Trading & Learning</li>
@@ -125,11 +132,16 @@
             <h2>🔹 Ready to master cryptocurrency trading?</h2>
             <a class="cta" href="#" onclick="alert('Redirecting to download options!');">Download Now</a>
         </section>
+
     </div>
 
     <footer>
-        <p>&copy; 2023 Cryptocurrency Simulator. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Cryptocurrency Simulator. All Rights Reserved.</p>
     </footer>
-</body>
 
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
 </html>
