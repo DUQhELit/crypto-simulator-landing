@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cryptocurrency Simulator - Learn, Trade, and Practice</title>
-    <meta name="description" content="Cryptocurrency Simulator lets you practice crypto trading, test strategies, and experience copy trading in a risk-free environment.">
-    <meta name="keywords" content="crypto trading simulator, cryptocurrency simulator, practice trading, copy trading, virtual crypto trading">
+    <title>Cryptocurrency Simulator - Master Crypto Trading</title>
+    <meta name="description" content="Cryptocurrency Simulator helps you master trading strategies in a risk-free environment. Learn copy trading and practice real-time trading simulation.">
+    <meta name="keywords" content="crypto trading simulator, copy trading, practice trading, virtual trading, cryptocurrency simulator">
     <meta name="author" content="Cryptocurrency Simulator">
 
-    <!-- Google Analytics -->
+    <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P3TMQE7ZVB"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-P3TMQE7ZVB');
+
+        function trackDownloadClick() {
+            gtag('event', 'click', {
+                'event_category': 'Button',
+                'event_label': 'Download'
+            });
+        }
     </script>
 
     <!-- Link to External CSS -->
@@ -23,27 +30,44 @@
 <body>
 
     <div class="container">
-        <h1>Welcome to Cryptocurrency Simulator</h1>
-        <p>Experience the future of trading. Simulate <strong>real</strong> cryptocurrency markets, test strategies, and explore <strong>copy trading</strong> in a risk-free environment.</p>
+        <h1>Cryptocurrency Simulator</h1>
+        <p class="subtitle">Master Crypto Trading with Real-Time Simulations</p>
 
-        <!-- Feature Section -->
-        <div class="features">
-            <div class="feature">
-                <img src="feature-1.png" alt="Feature 1">
-                <p>Practice live crypto trading with simulated funds.</p>
+        <!-- Introduction Section -->
+        <section class="intro">
+            <p>Want to learn how to trade cryptocurrency without the risk of losing money?  
+            <strong>Cryptocurrency Simulator</strong> lets you practice live market trading,  
+            simulate real investments, and explore <strong>copy trading</strong> in a safe environment.</p>
+        </section>
+
+        <!-- Why Download Section -->
+        <section class="why-download">
+            <h2>Why Download Cryptocurrency Simulator?</h2>
+            <div class="features">
+                <div class="feature">
+                    <img src="feature-1.png" alt="Feature 1">
+                    <h3>Real-Time Market Simulation</h3>
+                    <p>Trade with real market prices using virtual funds. Gain confidence before investing real money.</p>
+                </div>
+                <div class="feature">
+                    <img src="feature-2.png" alt="Feature 2">
+                    <h3>Learn Copy Trading</h3>
+                    <p>Follow and replicate expert traders' moves with our **CopyTrader** feature.</p>
+                </div>
+                <div class="feature">
+                    <img src="feature-3.png" alt="Feature 3">
+                    <h3>Track Portfolio Performance</h3>
+                    <p>Analyze your trading history, monitor ROI, and develop better trading strategies.</p>
+                </div>
             </div>
-            <div class="feature">
-                <img src="feature-2.png" alt="Feature 2">
-                <p>Learn copy trading and follow expert traders.</p>
-            </div>
-            <div class="feature">
-                <img src="feature-3.png" alt="Feature 3">
-                <p>Access real-time market data and historical charts.</p>
-            </div>
-        </div>
+        </section>
 
         <!-- Call-to-Action Button -->
-        <a href="#" class="cta-button">Download Now</a>
+        <div class="cta-section">
+            <h2>Start Trading Smarter Today</h2>
+            <p>Join thousands of users mastering crypto trading without financial risk.</p>
+            <a href="#" class="download-btn" onclick="trackDownloadClick()">Download Now</a>
+        </div>
     </div>
 
     <footer>
