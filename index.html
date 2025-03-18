@@ -23,6 +23,25 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-VQ7CZ715ZY');
+
+        // Button Click Tracking
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("download-btn").addEventListener("click", function() {
+                gtag('event', 'click', {
+                    'event_category': 'Download',
+                    'event_label': 'Download Button Clicked',
+                    'value': 1
+                });
+            });
+
+            document.getElementById("join-btn").addEventListener("click", function() {
+                gtag('event', 'click', {
+                    'event_category': 'Community',
+                    'event_label': 'Join Button Clicked',
+                    'value': 1
+                });
+            });
+        });
     </script>
 
     <style>
@@ -77,6 +96,7 @@
             border-radius: 5px;
             font-size: 18px;
             margin-top: 20px;
+            cursor: pointer;
         }
 
         .cta:hover {
@@ -118,7 +138,7 @@
 
         <h2>📥 Download Now</h2>
         <p>🔗 Available on the App Store & Google Play</p>
-        <a class="cta" href="#" onclick="alert('Redirecting to App Store and Google Play!');">Click Here to Start Trading Smarter Today!</a>
+        <a class="cta" id="download-btn" href="#" onclick="alert('Redirecting to App Store and Google Play!');">Click Here to Start Trading Smarter Today!</a>
 
         <h2>🚀 Get Started in Seconds!</h2>
         <ol class="steps">
@@ -129,7 +149,7 @@
 
         <h2>📣 Join Our Community!</h2>
         <p>Connect with other traders, share insights, and improve together.</p>
-        <a class="cta" href="#">Join Now</a>
+        <a class="cta" id="join-btn" href="#">Join Now</a>
     </div>
 
     <footer>
