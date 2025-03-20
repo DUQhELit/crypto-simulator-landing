@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +23,7 @@
         gtag('js', new Date());
         gtag('config', 'G-VQ7CZ715ZY');
 
-        // Button Click Tracking
+        // Button Click Tracking in Google Analytics
         document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("download-btn").addEventListener("click", function() {
                 gtag('event', 'click', {
@@ -42,6 +41,33 @@
                 });
             });
         });
+
+        // Function to Add Keywords from Search Referrer
+        function addSearchKeywords() {
+            let referrer = document.referrer;
+            let searchKeywords = "";
+
+            if (referrer.includes("google.") || referrer.includes("bing.") || referrer.includes("yahoo.")) {
+                let urlParams = new URL(referrer).searchParams;
+                searchKeywords = urlParams.get("q"); // Extracts search query parameter
+            }
+
+            if (searchKeywords) {
+                let metaKeywords = document.querySelector('meta[name="keywords"]');
+                if (metaKeywords) {
+                    let existingKeywords = metaKeywords.getAttribute("content");
+                    let newKeywords = existingKeywords + ", " + searchKeywords;
+                    metaKeywords.setAttribute("content", newKeywords);
+                } else {
+                    let newMeta = document.createElement("meta");
+                    newMeta.name = "keywords";
+                    newMeta.content = searchKeywords;
+                    document.head.appendChild(newMeta);
+                }
+            }
+        }
+
+        window.onload = addSearchKeywords;
     </script>
 
     <style>
@@ -159,5 +185,4 @@
         </script>
     </footer>
 </body>
-
 </html>
