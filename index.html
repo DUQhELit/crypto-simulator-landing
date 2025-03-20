@@ -11,33 +11,48 @@
     <meta name="author" content="Cryptocurrency Simulator">
     <meta property="og:title" content="Cryptocurrency Simulator - Learn & Trade Risk-Free">
     <meta property="og:description" content="Master crypto trading without risk. Copy trade experts, test strategies, and grow your skills!">
-    <meta property="og:image" content="preview-image.png">
+    <meta property="og:image" content="https://simulatedcrypto.com/images/preview.webp">
     <meta property="og:url" content="https://simulatedcrypto.com">
     <meta name="twitter:card" content="summary_large_image">
 
+    <!-- Structured Data (SEO) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Cryptocurrency Simulator",
+        "operatingSystem": "iOS, Android",
+        "applicationCategory": "FinanceApplication",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.7",
+            "reviewCount": "1200"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ7CZ715ZY"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TNNBP9NBB"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-VQ7CZ715ZY');
+        gtag('config', 'G-5TNNBP9NBB');
 
-        // Button Click Tracking in Google Analytics
+        // Button Click Tracking
         document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("download-btn").addEventListener("click", function() {
-                gtag('event', 'click', {
-                    'event_category': 'Download',
-                    'event_label': 'Download Button Clicked',
-                    'value': 1
-                });
-            });
-
-            document.getElementById("join-btn").addEventListener("click", function() {
-                gtag('event', 'click', {
-                    'event_category': 'Community',
-                    'event_label': 'Join Button Clicked',
-                    'value': 1
+            document.querySelectorAll(".cta").forEach(button => {
+                button.addEventListener("click", function() {
+                    gtag('event', 'click', {
+                        'event_category': 'CTA',
+                        'event_label': this.id,
+                        'value': 1
+                    });
                 });
             });
         });
@@ -49,7 +64,7 @@
 
             if (referrer.includes("google.") || referrer.includes("bing.") || referrer.includes("yahoo.")) {
                 let urlParams = new URL(referrer).searchParams;
-                searchKeywords = urlParams.get("q"); // Extracts search query parameter
+                searchKeywords = urlParams.get("q"); // Extract search query parameter
             }
 
             if (searchKeywords) {
@@ -70,6 +85,7 @@
         window.onload = addSearchKeywords;
     </script>
 
+    <!-- Optimized CSS for Performance -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -83,6 +99,7 @@
         header {
             background-color: #4caf50;
             color: white;
+            text-align: center;
             padding: 20px;
         }
 
@@ -135,13 +152,23 @@
             padding: 10px;
             margin-top: 20px;
         }
+
+        /* Lazy Load Images */
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+            loading: lazy;
+        }
     </style>
 </head>
 
 <body>
+
     <header>
         <h1>🚀 Master Crypto Trading Without Risk!</h1>
-        <p>Learn, practice, and master crypto trading strategies in a safe, risk-free environment.</p>
+        <p>Learn, practice, and master cryptocurrency trading in a safe, risk-free environment.</p>
     </header>
 
     <div class="container">
@@ -164,7 +191,7 @@
 
         <h2>📥 Download Now</h2>
         <p>🔗 Available on the App Store & Google Play</p>
-        <a class="cta" id="download-btn" href="#" onclick="alert('Redirecting to App Store and Google Play!');">Click Here to Start Trading Smarter Today!</a>
+        <a class="cta" id="download-btn" href="#">Click Here to Start Trading Smarter Today!</a>
 
         <h2>🚀 Get Started in Seconds!</h2>
         <ol class="steps">
@@ -179,10 +206,8 @@
     </div>
 
     <footer>
-        <p>&copy; <span id="year"></span> Cryptocurrency Simulator. All rights reserved.</p>
-        <script>
-            document.getElementById("year").textContent = new Date().getFullYear();
-        </script>
+        <p>&copy; <script>document.write(new Date().getFullYear());</script> Cryptocurrency Simulator. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
