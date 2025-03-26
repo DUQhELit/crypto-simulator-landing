@@ -1,213 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cryptocurrency Simulator - Learn & Trade Risk-Free</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cryptocurrency Simulator - Learn & Trade Risk-Free</title>
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Cryptocurrency Simulator - Learn crypto trading in a risk-free environment. Copy trade experts, test strategies, and improve your skills!">
-    <meta name="keywords" content="crypto trading simulator, copy trading, cryptocurrency, risk-free trading, learn crypto, virtual trading">
-    <meta name="author" content="Cryptocurrency Simulator">
-    <meta property="og:title" content="Cryptocurrency Simulator - Learn & Trade Risk-Free">
-    <meta property="og:description" content="Master crypto trading without risk. Copy trade experts, test strategies, and grow your skills!">
-    <meta property="og:image" content="https://simulatedcrypto.com/images/preview.webp">
-    <meta property="og:url" content="https://simulatedcrypto.com">
-    <meta name="twitter:card" content="summary_large_image">
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Cryptocurrency Simulator - Learn crypto trading in a risk-free environment. Copy trade experts, test strategies, and improve your skills!" />
+  <meta name="keywords" content="crypto trading simulator, copy trading, cryptocurrency, risk-free trading, learn crypto, virtual trading" />
+  <meta name="author" content="Cryptocurrency Simulator" />
+  <meta property="og:title" content="Cryptocurrency Simulator - Learn & Trade Risk-Free" />
+  <meta property="og:description" content="Master crypto trading without risk. Copy trade experts, test strategies, and grow your skills!" />
+  <meta property="og:image" content="https://simulatedcrypto.com/images/preview.webp" />
+  <meta property="og:url" content="https://simulatedcrypto.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://simulatedcrypto.com/" />
 
-    <!-- Structured Data (SEO) -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Cryptocurrency Simulator",
-        "operatingSystem": "iOS, Android",
-        "applicationCategory": "FinanceApplication",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.7",
-            "reviewCount": "1200"
-        },
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        }
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "Is Cryptocurrency Simulator free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, our simulator is completely free and risk-free."
+      }
+    },{
+      "@type": "Question",
+      "name": "Can I learn trading with this app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely! Our app is built for beginners and pros to test strategies."
+      }
+    }]
+  }
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TNNBP9NBB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-5TNNBP9NBB');
+  </script>
+
+  <style>
+    :root {
+      --bg: #f4f4f4;
+      --text: #333;
+      --accent: #4caf50;
+      --light: #e8f5e9;
     }
-    </script>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TNNBP9NBB"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-5TNNBP9NBB');
-
-        // Button Click Tracking
-        document.addEventListener("DOMContentLoaded", function() {
-            document.querySelectorAll(".cta").forEach(button => {
-                button.addEventListener("click", function() {
-                    gtag('event', 'click', {
-                        'event_category': 'CTA',
-                        'event_label': this.id,
-                        'value': 1
-                    });
-                });
-            });
-        });
-
-        // Function to Add Keywords from Search Referrer
-        function addSearchKeywords() {
-            let referrer = document.referrer;
-            let searchKeywords = "";
-
-            if (referrer.includes("google.") || referrer.includes("bing.") || referrer.includes("yahoo.")) {
-                let urlParams = new URL(referrer).searchParams;
-                searchKeywords = urlParams.get("q"); // Extract search query parameter
-            }
-
-            if (searchKeywords) {
-                let metaKeywords = document.querySelector('meta[name="keywords"]');
-                if (metaKeywords) {
-                    let existingKeywords = metaKeywords.getAttribute("content");
-                    let newKeywords = existingKeywords + ", " + searchKeywords;
-                    metaKeywords.setAttribute("content", newKeywords);
-                } else {
-                    let newMeta = document.createElement("meta");
-                    newMeta.name = "keywords";
-                    newMeta.content = searchKeywords;
-                    document.head.appendChild(newMeta);
-                }
-            }
-        }
-
-        window.onload = addSearchKeywords;
-    </script>
-
-    <!-- Optimized CSS for Performance -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-        }
-
-        header {
-            background-color: #4caf50;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        h1, h2 {
-            color: #4caf50;
-        }
-
-        .features, .benefits, .steps {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .features li, .benefits li, .steps li {
-            margin: 10px 0;
-            padding: 10px;
-            background: #e8f5e9;
-            border-left: 5px solid #4caf50;
-            text-align: left;
-        }
-
-        .cta {
-            display: inline-block;
-            background-color: #4caf50;
-            color: white;
-            padding: 15px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
-            margin-top: 20px;
-            cursor: pointer;
-        }
-
-        .cta:hover {
-            background-color: #45a049;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            margin-top: 20px;
-        }
-
-        /* Lazy Load Images */
-        img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: auto;
-            loading: lazy;
-        }
-    </style>
+    [data-theme="dark"] {
+      --bg: #121212;
+      --text: #eee;
+      --accent: #81c784;
+      --light: #1e1e1e;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      text-align: center;
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      background-color: var(--accent);
+      color: white;
+      padding: 20px;
+    }
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      background: var(--light);
+    }
+    h1, h2 {
+      color: var(--accent);
+    }
+    ul, ol {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: var(--light);
+      padding: 10px;
+      margin: 10px 0;
+      border-left: 5px solid var(--accent);
+      text-align: left;
+    }
+    .cta {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    .top-left {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+    }
+    .social-share a {
+      margin: 0 5px;
+      text-decoration: none;
+    }
+    .dark-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 6px 12px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
 </head>
-
 <body>
-
-    <header>
-        <h1>🚀 Master Crypto Trading Without Risk!</h1>
-        <p>Learn, practice, and master cryptocurrency trading in a safe, risk-free environment.</p>
-    </header>
-
-    <div class="container">
-        <h2>🔹 Key Features</h2>
-        <ul class="features">
-            <li>✅ Real-Time Market Simulation – Trade with live crypto prices</li>
-            <li>✅ Copy Trading – Follow expert traders and mirror their strategies</li>
-            <li>✅ Portfolio Management – Track your simulated investments and analyze performance</li>
-            <li>✅ Educational & Beginner-Friendly – Perfect for those learning how to trade</li>
-            <li>✅ Available on iOS & Android – Download and start trading today!</li>
-        </ul>
-
-        <h2>📲 Why Choose Cryptocurrency Simulator?</h2>
-        <ul class="benefits">
-            <li>🌎 Trade Crypto Without Risk – No real money required, learn the market safely</li>
-            <li>💡 Learn Copy Trading – See how professional traders operate</li>
-            <li>📊 Optimize Your Strategy – Test different trading strategies before using real funds</li>
-            <li>📈 Grow Your Knowledge – Improve your trading skills with in-depth analytics</li>
-        </ul>
-
-        <h2>📥 Download Now</h2>
-        <p>🔗 Available on the App Store & Google Play</p>
-        <a class="cta" id="download-btn" href="#">Click Here to Start Trading Smarter Today!</a>
-
-        <h2>🚀 Get Started in Seconds!</h2>
-        <ol class="steps">
-            <li>1️⃣ Download the App</li>
-            <li>2️⃣ Set Up Your Virtual Portfolio</li>
-            <li>3️⃣ Start Trading & Learning</li>
-        </ol>
-
-        <h2>📣 Join Our Community!</h2>
-        <p>Connect with other traders, share insights, and improve together.</p>
-        <a class="cta" id="join-btn" href="#">Join Now</a>
+  <div class="top-left">
+    <div id="datetime" style="font-size: 14px;"></div>
+    <button onclick="bookmarkSite()">Bookmark This App</button>
+    <div class="social-share">
+      <a id="fb" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/facebook.svg" width="20" /></a>
+      <a id="tw" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/twitter.svg" width="20" /></a>
+      <a id="li" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/linkedin.svg" width="20" /></a>
     </div>
+  </div>
+  <button class="dark-toggle" onclick="toggleTheme()">Toggle Theme</button>
 
-    <footer>
-        <p>&copy; <script>document.write(new Date().getFullYear());</script> Cryptocurrency Simulator. All rights reserved.</p>
-    </footer>
+  <header>
+    <h1>🚀 Master Crypto Trading Without Risk!</h1>
+    <p>Learn, practice, and master cryptocurrency trading in a safe, risk-free environment.</p>
+  </header>
 
+  <div class="container">
+    <h2>🔹 Key Features</h2>
+    <ul>
+      <li>✅ Real-Time Market Simulation</li>
+      <li>✅ Copy Trading</li>
+      <li>✅ Portfolio Tracking</li>
+      <li>✅ Beginner-Friendly & Educational</li>
+      <li>✅ iOS & Android Available</li>
+    </ul>
+
+    <h2>📥 Download Now</h2>
+    <a class="cta" id="download-btn" href="#">Start Trading Today!</a>
+
+    <h2>📈 Why Choose Us?</h2>
+    <ul>
+      <li>💡 Learn Copy Trading</li>
+      <li>📊 Optimize Strategies</li>
+      <li>📈 Grow Knowledge</li>
+    </ul>
+
+    <h2>🚀 Get Started in Seconds!</h2>
+    <ol>
+      <li>Download the App</li>
+      <li>Set Up Your Virtual Portfolio</li>
+      <li>Start Trading & Learning</li>
+    </ol>
+
+    <h2>📣 Join Our Community!</h2>
+    <a class="cta" id="join-btn" href="#">Join Now</a>
+  </div>
+
+  <footer>
+    <p>&copy; <script>document.write(new Date().getFullYear());</script> Cryptocurrency Simulator. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('datetime').textContent = new Date().toLocaleString();
+
+    function toggleTheme() {
+      const theme = document.documentElement.getAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', theme === 'dark' ? 'light' : 'dark');
+    }
+
+    function bookmarkSite() {
+      const url = window.location.href;
+      const title = document.title;
+      if (window.sidebar && window.sidebar.addPanel) window.sidebar.addPanel(title, url, '');
+      else if (window.external && 'AddFavorite' in window.external) window.external.AddFavorite(url, title);
+      else alert('Press Ctrl+D (or Cmd+D) to bookmark.');
+    }
+
+    const pageUrl = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent(document.title);
+    document.getElementById('fb').href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+    document.getElementById('tw').href = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${title}`;
+    document.getElementById('li').href = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
+
+    // Keyword injection + GA event tracking
+    window.addEventListener('load', () => {
+      const ref = document.referrer;
+      let q = "";
+      if (ref.includes("google") || ref.includes("bing") || ref.includes("yahoo")) {
+        try { q = new URL(ref).searchParams.get("q") || ""; } catch {}
+      }
+      if (q) {
+        const tag = document.querySelector("meta[name='keywords']");
+        if (tag && !tag.content.includes(q)) tag.content += `, ${q}`;
+        gtag('event', 'search-keyword', { event_category: 'Search', event_label: q });
+      }
+    });
+  </script>
 </body>
 </html>
