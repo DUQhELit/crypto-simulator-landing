@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cryptocurrency Simulator - Learn & Trade Risk-Free</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Trading Simulator - Learn & Practice Risk-Free</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Cryptocurrency Simulator - Learn crypto trading in a risk-free environment. Copy trade experts, test strategies, and improve your skills!" />
-  <meta name="keywords" content="crypto trading simulator, copy trading, cryptocurrency, risk-free trading, learn crypto, virtual trading" />
-  <meta name="author" content="Cryptocurrency Simulator" />
-  <meta property="og:title" content="Cryptocurrency Simulator - Learn & Trade Risk-Free" />
-  <meta property="og:description" content="Master crypto trading without risk. Copy trade experts, test strategies, and grow your skills!" />
-  <meta property="og:image" content="https://simulatedcrypto.com/images/preview.webp" />
-  <meta property="og:url" content="https://simulatedcrypto.com" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="canonical" href="https://simulatedcrypto.com/" />
+  <meta name="description" content="Practice crypto trading without risk. Simulate real-time trades, follow expert strategies, and boost your trading confidence.">
+  <meta name="keywords" content="crypto trading simulator, virtual crypto app, learn bitcoin, practice ethereum trading, risk free trading">
+  <meta name="author" content="SimulatedCrypto Team">
+  <meta property="og:title" content="Crypto Simulator - Learn & Trade Risk-Free">
+  <meta property="og:description" content="Copy trade experts, simulate portfolios, and grow your crypto knowledge with real-time data.">
+  <meta property="og:image" content="https://simulatedcrypto.com/images/preview.webp">
+  <meta property="og:url" content="https://simulatedcrypto.com">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <!-- FAQ Schema -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{
-      "@type": "Question",
-      "name": "Is Cryptocurrency Simulator free to use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, our simulator is completely free and risk-free."
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Simulated Crypto Trading App",
+      "operatingSystem": "iOS, Android",
+      "applicationCategory": "FinanceApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
       }
-    },{
-      "@type": "Question",
-      "name": "Can I learn trading with this app?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Absolutely! Our app is built for beginners and pros to test strategies."
-      }
-    }]
-  }
+    }
   </script>
 
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TNNBP9NBB"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ7CZ715ZY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-5TNNBP9NBB');
+    gtag('config', 'G-VQ7CZ715ZY');
+  </script>
+
+  <!-- Dynamic Keyword Injection -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let ref = document.referrer;
+      if (/google|bing|yahoo/.test(ref)) {
+        let params = new URL(ref).searchParams;
+        let q = params.get("q");
+        if (q) {
+          let meta = document.querySelector('meta[name="keywords"]');
+          if (meta) meta.content += ", " + q;
+        }
+      }
+    });
   </script>
 
   <style>
@@ -53,179 +60,127 @@
       --bg: #f4f4f4;
       --text: #333;
       --accent: #4caf50;
-      --light: #e8f5e9;
+      --light: white;
     }
     [data-theme="dark"] {
-      --bg: #121212;
-      --text: #eee;
-      --accent: #81c784;
-      --light: #1e1e1e;
+      --bg: #111;
+      --text: #ddd;
+      --accent: #00c853;
+      --light: #222;
     }
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: var(--bg);
+      background: var(--bg);
       color: var(--text);
-      text-align: center;
-      transition: background 0.3s, color 0.3s;
+      margin: 0;
     }
-    header {
-      background-color: var(--accent);
+    header, footer {
+      background: var(--accent);
       color: white;
-      padding: 20px;
+      padding: 1em;
+      text-align: center;
     }
     .container {
-      width: 90%;
+      padding: 2em;
       max-width: 800px;
-      margin: 20px auto;
-      background-color: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin: auto;
       background: var(--light);
-    }
-    h1, h2 {
-      color: var(--accent);
-    }
-    ul, ol {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      background: var(--light);
-      padding: 10px;
-      margin: 10px 0;
-      border-left: 5px solid var(--accent);
-      text-align: left;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     .cta {
       display: inline-block;
       background: var(--accent);
       color: white;
-      padding: 15px 20px;
-      text-decoration: none;
+      padding: 0.75em 1.5em;
       border-radius: 5px;
-      font-size: 18px;
-      margin-top: 20px;
+      margin: 1em 0;
+      text-decoration: none;
+    }
+    .features li, .steps li {
+      text-align: left;
+      margin: 0.5em 0;
+    }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9em;
+      padding: 0.5em 1em;
+      background: var(--light);
+    }
+    .share-icons svg {
+      width: 20px;
+      margin-left: 10px;
       cursor: pointer;
     }
-    footer {
-      background-color: #333;
-      color: white;
-      padding: 10px;
-      margin-top: 20px;
-    }
-    .top-left {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      z-index: 1000;
-    }
-    .social-share a {
-      margin: 0 5px;
-      text-decoration: none;
-    }
-    .dark-toggle {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      padding: 6px 12px;
-      background: var(--accent);
-      color: white;
-      border: none;
-      border-radius: 5px;
+    .toggle-darkmode {
       cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <div class="top-left">
-    <div id="datetime" style="font-size: 14px;"></div>
-    <button onclick="bookmarkSite()">Bookmark This App</button>
-    <div class="social-share">
-      <a id="fb" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/facebook.svg" width="20" /></a>
-      <a id="tw" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/twitter.svg" width="20" /></a>
-      <a id="li" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/linkedin.svg" width="20" /></a>
+  <div class="top-bar">
+    <div id="date-time"></div>
+    <div class="share-icons">
+      <span>Share:</span>
+      <a href="https://twitter.com/share?url=https://simulatedcrypto.com" target="_blank" title="Share on Twitter">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c13 8 27-7 27-13.5A10.3 10.3 0 0 0 23 3z"/></svg>
+      </a>
+      <span class="toggle-darkmode">🌓</span>
     </div>
   </div>
-  <button class="dark-toggle" onclick="toggleTheme()">Toggle Theme</button>
 
   <header>
-    <h1>🚀 Master Crypto Trading Without Risk!</h1>
-    <p>Learn, practice, and master cryptocurrency trading in a safe, risk-free environment.</p>
+    <h1>🚀 Simulate Crypto Trading Risk-Free</h1>
+    <p>Trade smarter with real-time data. Learn strategies. No risk, just rewards.</p>
   </header>
 
   <div class="container">
-    <h2>🔹 Key Features</h2>
-    <ul>
-      <li>✅ Real-Time Market Simulation</li>
-      <li>✅ Copy Trading</li>
-      <li>✅ Portfolio Tracking</li>
-      <li>✅ Beginner-Friendly & Educational</li>
-      <li>✅ iOS & Android Available</li>
+    <h2>🔹 Features</h2>
+    <ul class="features">
+      <li>✅ Real-time price tracking</li>
+      <li>✅ Copy expert trades</li>
+      <li>✅ Track performance and PnL</li>
+      <li>✅ Available on iOS & Android</li>
     </ul>
 
-    <h2>📥 Download Now</h2>
-    <a class="cta" id="download-btn" href="#">Start Trading Today!</a>
+    <h2>📥 Start Simulating</h2>
+    <a class="cta" href="#">Download App</a>
 
-    <h2>📈 Why Choose Us?</h2>
-    <ul>
-      <li>💡 Learn Copy Trading</li>
-      <li>📊 Optimize Strategies</li>
-      <li>📈 Grow Knowledge</li>
-    </ul>
-
-    <h2>🚀 Get Started in Seconds!</h2>
-    <ol>
-      <li>Download the App</li>
-      <li>Set Up Your Virtual Portfolio</li>
-      <li>Start Trading & Learning</li>
+    <h2>🧠 Learn How It Works</h2>
+    <ol class="steps">
+      <li>Download the app</li>
+      <li>Create your virtual portfolio</li>
+      <li>Follow strategies & improve</li>
     </ol>
 
-    <h2>📣 Join Our Community!</h2>
-    <a class="cta" id="join-btn" href="#">Join Now</a>
+    <h2>📢 Trusted by Thousands</h2>
+    <p>"This app taught me more than YouTube ever could." — <strong>Jane D.</strong></p>
+    <p>"Perfect for testing strategies before risking real money." — <strong>Brian T.</strong></p>
+
+    <a class="cta" href="#">Join Free Today</a>
   </div>
 
   <footer>
-    <p>&copy; <script>document.write(new Date().getFullYear());</script> Cryptocurrency Simulator. All rights reserved.</p>
+    <p>&copy; <span id="year"></span> SimulatedCrypto. All rights reserved.</p>
   </footer>
 
   <script>
-    document.getElementById('datetime').textContent = new Date().toLocaleString();
+    // Live date/time
+    const dt = document.getElementById("date-time");
+    setInterval(() => {
+      const now = new Date();
+      dt.innerText = now.toLocaleString();
+    }, 1000);
 
-    function toggleTheme() {
-      const theme = document.documentElement.getAttribute('data-theme');
-      document.documentElement.setAttribute('data-theme', theme === 'dark' ? 'light' : 'dark');
-    }
-
-    function bookmarkSite() {
-      const url = window.location.href;
-      const title = document.title;
-      if (window.sidebar && window.sidebar.addPanel) window.sidebar.addPanel(title, url, '');
-      else if (window.external && 'AddFavorite' in window.external) window.external.AddFavorite(url, title);
-      else alert('Press Ctrl+D (or Cmd+D) to bookmark.');
-    }
-
-    const pageUrl = encodeURIComponent(window.location.href);
-    const title = encodeURIComponent(document.title);
-    document.getElementById('fb').href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
-    document.getElementById('tw').href = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${title}`;
-    document.getElementById('li').href = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
-
-    // Keyword injection + GA event tracking
-    window.addEventListener('load', () => {
-      const ref = document.referrer;
-      let q = "";
-      if (ref.includes("google") || ref.includes("bing") || ref.includes("yahoo")) {
-        try { q = new URL(ref).searchParams.get("q") || ""; } catch {}
-      }
-      if (q) {
-        const tag = document.querySelector("meta[name='keywords']");
-        if (tag && !tag.content.includes(q)) tag.content += `, ${q}`;
-        gtag('event', 'search-keyword', { event_category: 'Search', event_label: q });
-      }
+    // Dark mode toggle
+    const toggle = document.querySelector('.toggle-darkmode');
+    toggle.addEventListener('click', () => {
+      document.body.toggleAttribute('data-theme');
     });
+
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
