@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cryptocurrency Simulator - Learn & Trade Risk-Free</title>
-  
+
   <!-- SEO Meta Tags -->
   <meta name="description" content="Practice crypto trading with real-time data in a risk-free environment. Try our cryptocurrency simulator and learn trading strategies that work." />
   <meta name="keywords" content="crypto simulator, virtual crypto trading, copy trading, learn bitcoin, risk free crypto app, simulated cryptocurrency trading" />
@@ -18,7 +18,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ7CZ715ZY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-VQ7CZ715ZY');
   </script>
@@ -57,7 +57,7 @@
     h1, h2 {
       color: #4caf50;
     }
-    .features, .benefits, .steps {
+    ul {
       list-style: none;
       padding: 0;
       text-align: left;
@@ -95,10 +95,9 @@
 </head>
 
 <body>
-
   <header>
     <div class="top-left">
-      <span id="datetime"></span> | <a href="#" onclick="bookmarkPage()">Bookmark This Page</a>
+      <span id="datetime"></span> | <a href="#" onclick="bookmarkPage()">Bookmark</a>
     </div>
     <h1>🚀 Master Crypto Trading Without Risk!</h1>
     <p>Learn and simulate cryptocurrency trading in a safe, risk-free environment.</p>
@@ -110,7 +109,7 @@
 
   <div class="container">
     <h2>🔹 Key Features</h2>
-    <ul class="features">
+    <ul>
       <li>✅ Real-Time Market Simulation</li>
       <li>✅ Copy Professional Traders</li>
       <li>✅ Portfolio & Strategy Tracking</li>
@@ -119,7 +118,7 @@
     </ul>
 
     <h2>📲 Why Use Our Simulator?</h2>
-    <ul class="benefits">
+    <ul>
       <li>🌎 No Real Money Needed</li>
       <li>💡 Learn from Real Market Movements</li>
       <li>📊 Optimize Trading Tactics</li>
@@ -131,7 +130,7 @@
     <a class="cta" id="download-btn">Start Trading Free</a>
 
     <h2>🚀 Get Started in Seconds</h2>
-    <ol class="steps">
+    <ol>
       <li>1️⃣ Download the App</li>
       <li>2️⃣ Set Up Your Portfolio</li>
       <li>3️⃣ Start Simulated Trading</li>
@@ -155,6 +154,9 @@
     }
     updateDateTime();
 
+    // Set current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
     // Bookmark Function
     function bookmarkPage() {
       const url = window.location.href;
@@ -168,7 +170,7 @@
       }
     }
 
-    // Click Tracking
+    // GA Click Tracking
     document.getElementById("download-btn").addEventListener("click", function () {
       gtag('event', 'click', {
         'event_category': 'CTA',
@@ -181,6 +183,24 @@
         'event_category': 'CTA',
         'event_label': 'Join Button'
       });
+    });
+
+    // Dynamic Keyword Injection
+    window.addEventListener("load", function () {
+      const referrer = document.referrer;
+      if (referrer.includes("google.") || referrer.includes("bing.") || referrer.includes("yahoo.")) {
+        const urlParams = new URL(referrer).searchParams;
+        const searchQuery = urlParams.get("q");
+        if (searchQuery) {
+          const metaKeywords = document.querySelector('meta[name="keywords"]');
+          if (metaKeywords) {
+            let currentKeywords = metaKeywords.getAttribute("content");
+            if (!currentKeywords.includes(searchQuery)) {
+              metaKeywords.setAttribute("content", currentKeywords + ", " + searchQuery);
+            }
+          }
+        }
+      }
     });
   </script>
 </body>
