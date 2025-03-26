@@ -1,35 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crypto Trading Simulator - Learn & Practice Risk-Free</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cryptocurrency Simulator - Learn & Trade Risk-Free</title>
+  
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Practice crypto trading without risk. Simulate real-time trades, follow expert strategies, and boost your trading confidence.">
-  <meta name="keywords" content="crypto trading simulator, virtual crypto app, learn bitcoin, practice ethereum trading, risk free trading">
-  <meta name="author" content="SimulatedCrypto Team">
-  <meta property="og:title" content="Crypto Simulator - Learn & Trade Risk-Free">
-  <meta property="og:description" content="Copy trade experts, simulate portfolios, and grow your crypto knowledge with real-time data.">
-  <meta property="og:image" content="https://simulatedcrypto.com/images/preview.webp">
-  <meta property="og:url" content="https://simulatedcrypto.com">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Simulated Crypto Trading App",
-      "operatingSystem": "iOS, Android",
-      "applicationCategory": "FinanceApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    }
-  </script>
+  <meta name="description" content="Practice crypto trading with real-time data in a risk-free environment. Try our cryptocurrency simulator and learn trading strategies that work." />
+  <meta name="keywords" content="crypto simulator, virtual crypto trading, copy trading, learn bitcoin, risk free crypto app, simulated cryptocurrency trading" />
+  <meta property="og:title" content="Cryptocurrency Simulator - Learn & Trade Risk-Free" />
+  <meta property="og:description" content="Master crypto trading without risk. Learn strategies, copy traders, and improve your skills with live data!" />
+  <meta property="og:image" content="https://simulatedcrypto.com/images/preview.webp" />
+  <meta property="og:url" content="https://simulatedcrypto.com" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ7CZ715ZY"></script>
@@ -40,147 +23,165 @@
     gtag('config', 'G-VQ7CZ715ZY');
   </script>
 
-  <!-- Dynamic Keyword Injection -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      let ref = document.referrer;
-      if (/google|bing|yahoo/.test(ref)) {
-        let params = new URL(ref).searchParams;
-        let q = params.get("q");
-        if (q) {
-          let meta = document.querySelector('meta[name="keywords"]');
-          if (meta) meta.content += ", " + q;
-        }
-      }
-    });
-  </script>
-
+  <!-- Styles -->
   <style>
-    :root {
-      --bg: #f4f4f4;
-      --text: #333;
-      --accent: #4caf50;
-      --light: white;
-    }
-    [data-theme="dark"] {
-      --bg: #111;
-      --text: #ddd;
-      --accent: #00c853;
-      --light: #222;
-    }
     body {
       font-family: Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
       margin: 0;
-    }
-    header, footer {
-      background: var(--accent);
-      color: white;
-      padding: 1em;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
       text-align: center;
     }
+    header {
+      background-color: #4caf50;
+      color: white;
+      padding: 20px;
+      position: relative;
+    }
+    .top-left {
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      font-size: 12px;
+      color: #fff;
+    }
     .container {
-      padding: 2em;
       max-width: 800px;
-      margin: auto;
-      background: var(--light);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #4caf50;
+    }
+    .features, .benefits, .steps {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+    li {
+      margin: 10px 0;
+      padding: 10px;
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
     }
     .cta {
       display: inline-block;
-      background: var(--accent);
+      background: #4caf50;
       color: white;
-      padding: 0.75em 1.5em;
+      padding: 12px 20px;
+      margin-top: 20px;
       border-radius: 5px;
-      margin: 1em 0;
       text-decoration: none;
-    }
-    .features li, .steps li {
-      text-align: left;
-      margin: 0.5em 0;
-    }
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.9em;
-      padding: 0.5em 1em;
-      background: var(--light);
-    }
-    .share-icons svg {
-      width: 20px;
-      margin-left: 10px;
+      font-weight: bold;
       cursor: pointer;
     }
-    .toggle-darkmode {
-      cursor: pointer;
+    .cta:hover {
+      background: #45a049;
+    }
+    footer {
+      background: #333;
+      color: white;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    .share-buttons {
+      margin-top: 10px;
     }
   </style>
 </head>
+
 <body>
-  <div class="top-bar">
-    <div id="date-time"></div>
-    <div class="share-icons">
-      <span>Share:</span>
-      <a href="https://twitter.com/share?url=https://simulatedcrypto.com" target="_blank" title="Share on Twitter">
-        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c13 8 27-7 27-13.5A10.3 10.3 0 0 0 23 3z"/></svg>
-      </a>
-      <span class="toggle-darkmode">🌓</span>
-    </div>
-  </div>
 
   <header>
-    <h1>🚀 Simulate Crypto Trading Risk-Free</h1>
-    <p>Trade smarter with real-time data. Learn strategies. No risk, just rewards.</p>
+    <div class="top-left">
+      <span id="datetime"></span> | <a href="#" onclick="bookmarkPage()">Bookmark This Page</a>
+    </div>
+    <h1>🚀 Master Crypto Trading Without Risk!</h1>
+    <p>Learn and simulate cryptocurrency trading in a safe, risk-free environment.</p>
+
+    <div class="share-buttons">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://simulatedcrypto.com" target="_blank" class="cta">Share on Facebook</a>
+    </div>
   </header>
 
   <div class="container">
-    <h2>🔹 Features</h2>
+    <h2>🔹 Key Features</h2>
     <ul class="features">
-      <li>✅ Real-time price tracking</li>
-      <li>✅ Copy expert trades</li>
-      <li>✅ Track performance and PnL</li>
+      <li>✅ Real-Time Market Simulation</li>
+      <li>✅ Copy Professional Traders</li>
+      <li>✅ Portfolio & Strategy Tracking</li>
+      <li>✅ Built for Beginners</li>
       <li>✅ Available on iOS & Android</li>
     </ul>
 
-    <h2>📥 Start Simulating</h2>
-    <a class="cta" href="#">Download App</a>
+    <h2>📲 Why Use Our Simulator?</h2>
+    <ul class="benefits">
+      <li>🌎 No Real Money Needed</li>
+      <li>💡 Learn from Real Market Movements</li>
+      <li>📊 Optimize Trading Tactics</li>
+      <li>📈 Improve Your Strategy Over Time</li>
+    </ul>
 
-    <h2>🧠 Learn How It Works</h2>
+    <h2>📥 Download the App</h2>
+    <p>Available on the App Store and Google Play</p>
+    <a class="cta" id="download-btn">Start Trading Free</a>
+
+    <h2>🚀 Get Started in Seconds</h2>
     <ol class="steps">
-      <li>Download the app</li>
-      <li>Create your virtual portfolio</li>
-      <li>Follow strategies & improve</li>
+      <li>1️⃣ Download the App</li>
+      <li>2️⃣ Set Up Your Portfolio</li>
+      <li>3️⃣ Start Simulated Trading</li>
     </ol>
 
-    <h2>📢 Trusted by Thousands</h2>
-    <p>"This app taught me more than YouTube ever could." — <strong>Jane D.</strong></p>
-    <p>"Perfect for testing strategies before risking real money." — <strong>Brian T.</strong></p>
-
-    <a class="cta" href="#">Join Free Today</a>
+    <h2>📣 Join the Community</h2>
+    <p>Connect, learn, and grow with thousands of other crypto traders.</p>
+    <a class="cta" id="join-btn">Join Now</a>
   </div>
 
   <footer>
     <p>&copy; <span id="year"></span> SimulatedCrypto. All rights reserved.</p>
   </footer>
 
+  <!-- Scripts -->
   <script>
-    // Live date/time
-    const dt = document.getElementById("date-time");
-    setInterval(() => {
+    // Set current time
+    function updateDateTime() {
       const now = new Date();
-      dt.innerText = now.toLocaleString();
-    }, 1000);
+      document.getElementById("datetime").textContent = now.toLocaleString();
+    }
+    updateDateTime();
 
-    // Dark mode toggle
-    const toggle = document.querySelector('.toggle-darkmode');
-    toggle.addEventListener('click', () => {
-      document.body.toggleAttribute('data-theme');
+    // Bookmark Function
+    function bookmarkPage() {
+      const url = window.location.href;
+      const title = document.title;
+      if (window.sidebar && window.sidebar.addPanel) {
+        window.sidebar.addPanel(title, url, "");
+      } else if (window.external && ("AddFavorite" in window.external)) {
+        window.external.AddFavorite(url, title);
+      } else {
+        alert("Press Ctrl+D (Cmd+D for Mac) to bookmark this page.");
+      }
+    }
+
+    // Click Tracking
+    document.getElementById("download-btn").addEventListener("click", function () {
+      gtag('event', 'click', {
+        'event_category': 'CTA',
+        'event_label': 'Download Button'
+      });
     });
 
-    // Year
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("join-btn").addEventListener("click", function () {
+      gtag('event', 'click', {
+        'event_category': 'CTA',
+        'event_label': 'Join Button'
+      });
+    });
   </script>
 </body>
 </html>
