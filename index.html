@@ -13,6 +13,7 @@
   <meta property="og:url" content="https://simulatedcrypto.com" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ7CZ715ZY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -52,19 +53,20 @@
       right: 20px;
     }
     .iphone-wrapper {
-      width: 360px;
+      width: 430px;
+      height: 932px;
       margin: 30px auto;
       border: 16px solid #333;
-      border-radius: 50px;
+      border-radius: 60px;
       position: relative;
       background: #111;
       box-shadow: 0 0 40px rgba(0,0,0,0.3);
     }
     .iphone-notch {
-      width: 150px;
-      height: 30px;
+      width: 200px;
+      height: 35px;
       background: #333;
-      border-radius: 0 0 20px 20px;
+      border-radius: 0 0 30px 30px;
       position: absolute;
       top: -16px;
       left: 50%;
@@ -73,17 +75,13 @@
     }
     .iphone-screen {
       width: 100%;
-      height: 640px;
-      border-radius: 30px;
+      height: 100%;
+      border-radius: 44px;
       overflow-y: auto;
       background: #fff;
-      scroll-behavior: smooth;
     }
     .dark-mode .iphone-screen {
       background: #1c1c1c;
-    }
-    .iphone-screen::-webkit-scrollbar {
-      width: 0;
     }
     .screen-content {
       padding: 20px;
@@ -104,8 +102,7 @@
       text-indent: -1.2em;
     }
     ul li::before {
-      content: "\2714 ";
-      color: #4caf50;
+      content: "\2714\FE0F ";
     }
     .cta {
       display: inline-block;
@@ -126,14 +123,12 @@
     }
     .testimonial {
       background: #e8f5e9;
-      color: #333;
       padding: 15px;
       border-radius: 8px;
       margin-top: 15px;
     }
     .dark-mode .testimonial {
-      background: #2a2a2a;
-      color: #fff;
+      background: #2e2e2e;
     }
     footer {
       background: #333;
@@ -145,17 +140,13 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      z-index: 999;
       background: #4caf50;
       color: white;
-      padding: 15px 20px;
-      border-radius: 30px;
+      padding: 12px 18px;
+      border-radius: 25px;
       font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-    .sticky-cta:hover {
-      background: #45a049;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 9999;
     }
   </style>
 </head>
@@ -199,12 +190,14 @@
     </div>
   </div>
 
-  <a class="sticky-cta" href="#">Download App</a>
-
   <footer>
     <p>&copy; <span id="year"></span> TradeSimulator. All rights reserved.</p>
     <a href="#" onclick="bookmarkPage()">Bookmark This Page</a>
   </footer>
+
+  <div class="sticky-cta">
+    <a href="#" style="color:white; text-decoration:none;">Download App</a>
+  </div>
 
   <script>
     document.getElementById("timestamp").textContent = new Date().toLocaleString();
