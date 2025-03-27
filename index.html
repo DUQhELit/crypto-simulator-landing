@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Download TradeSimulator – Master Crypto Trading Risk-Free</title>
-  <meta name="description" content="Master crypto trading risk-free with TradeSimulator. Practice live trading, copy professionals, and track PnL. Available on iOS & Android.">
-  <meta name="keywords" content="crypto trading simulator, virtual crypto trading, copy trading, risk-free trading, crypto learning app">
-  <meta name="author" content="TradeSimulator Team">
-  <meta property="og:title" content="TradeSimulator – Crypto Trading Practice App">
-  <meta property="og:description" content="Simulate crypto trading in real-time without risk. Track, learn, and master strategies on iOS and Android.">
-  <meta property="og:image" content="https://simulatedcrypto.com/images/preview.webp">
-  <meta property="og:url" content="https://simulatedcrypto.com">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="description" content="Master crypto trading risk-free with TradeSimulator. Practice live trading, copy professionals, and track PnL. Available on iOS & Android." />
+  <meta name="keywords" content="crypto trading simulator, virtual crypto trading, copy trading, risk-free trading, crypto learning app" />
+  <meta name="author" content="TradeSimulator Team" />
+  <meta property="og:title" content="TradeSimulator – Crypto Trading Practice App" />
+  <meta property="og:description" content="Simulate crypto trading in real-time without risk. Track, learn, and master strategies on iOS and Android." />
+  <meta property="og:image" content="https://simulatedcrypto.com/images/preview.webp" />
+  <meta property="og:url" content="https://simulatedcrypto.com" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ7CZ715ZY"></script>
@@ -31,61 +31,69 @@
       color: #333;
       text-align: center;
     }
-
     .dark-mode {
       background-color: #121212;
       color: #fff;
     }
-
-    .dark-mode .container, .dark-mode .testimonial {
-      background: #1e1e1e;
-      color: #fff;
-    }
-
     header {
       background-color: #4caf50;
       color: white;
       padding: 10px;
       position: relative;
     }
-
     .time-meta {
       position: absolute;
       top: 10px;
       left: 20px;
       font-size: 14px;
     }
-
     .dark-toggle {
       position: absolute;
       top: 10px;
       right: 20px;
     }
 
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    .iphone-wrapper {
+      width: 360px;
+      margin: 30px auto;
+      border: 16px solid #333;
+      border-radius: 50px;
       position: relative;
+      background: #111;
+      box-shadow: 0 0 40px rgba(0,0,0,0.3);
     }
 
-    .phone-frame {
-      border: 12px solid #333;
-      border-radius: 40px;
-      padding: 20px;
+    .iphone-notch {
+      width: 150px;
+      height: 30px;
+      background: #333;
+      border-radius: 0 0 20px 20px;
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    .iphone-screen {
+      width: 100%;
+      height: 100%;
+      border-radius: 30px;
+      overflow: hidden;
       background: #fff;
-      box-shadow: 0 0 30px rgba(0,0,0,0.2);
     }
 
-    .dark-mode .phone-frame {
-      background: #000;
-      color: #fff;
+    .dark-mode .iphone-screen {
+      background: #1c1c1c;
     }
 
-    h1, h2 {
+    .screen-content {
+      padding: 20px;
+      box-sizing: border-box;
+      color: inherit;
+    }
+
+    h1, h2, h3 {
       color: #4caf50;
     }
 
@@ -94,13 +102,11 @@
       padding-left: 0;
       list-style: none;
     }
-
     ul li {
       margin: 10px 0;
       padding-left: 1.2em;
       text-indent: -1.2em;
     }
-
     ul li::before {
       content: "✅ ";
     }
@@ -116,22 +122,25 @@
       font-weight: bold;
       cursor: pointer;
     }
-
     .cta:hover {
       background: #45a049;
     }
 
-    .sticky-download {
+    .sticky-cta {
       position: fixed;
-      bottom: 15px;
-      right: 15px;
-      z-index: 999;
-      background: #4caf50;
-      color: #fff;
-      padding: 12px 16px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #4caf50;
+      color: white;
+      padding: 15px 20px;
       border-radius: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+    .sticky-cta:hover {
+      background-color: #45a049;
     }
 
     .social-share {
@@ -144,6 +153,11 @@
       border-radius: 8px;
       margin-top: 15px;
     }
+    
+    .dark-mode .testimonial {
+  background: #1e1e1e;
+  color: #f1f1f1;
+}
 
     footer {
       background: #333;
@@ -151,114 +165,106 @@
       padding: 15px;
       margin-top: 30px;
     }
-
-    footer a {
-      color: #fff;
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
+  <header>
+    <div class="time-meta" id="timestamp"></div>
+    <button class="dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <h1>Download TradeSimulator Now</h1>
+    <p>Master cryptocurrency trading risk-free with live data</p>
+  </header>
 
-<header>
-  <div class="time-meta" id="timestamp"></div>
-  <button class="dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-  <h1>Download TradeSimulator Now</h1>
-  <p>Master cryptocurrency trading risk-free with live data</p>
-</header>
+  <div class="iphone-wrapper">
+    <div class="iphone-notch"></div>
+    <div class="iphone-screen">
+      <div class="screen-content">
+        <h2>Why Download TradeSimulator?</h2>
+        <ul>
+          <li>Simulate real-time crypto trading with live market prices</li>
+          <li>Copy professional traders on Ethereum, BSC, and Solana chains</li>
+          <li>Track your portfolio performance and PnL</li>
+          <li>Test strategies without real money or risk</li>
+          <li>Watch ads or upgrade for more virtual funds</li>
+          <li>Beginner-friendly for new traders</li>
+          <li>Available on iOS & Android</li>
+        </ul>
 
-<div class="container phone-frame">
-  <h2>Why Download TradeSimulator?</h2>
-  <ul>
-    <li>Simulate real-time crypto trading with live market prices</li>
-    <li>Copy professional traders on Ethereum, BSC, and Solana chains</li>
-    <li>Track your portfolio performance and PnL</li>
-    <li>Test strategies without real money or risk</li>
-    <li>Watch ads or upgrade for more virtual funds</li>
-    <li>Beginner-friendly for new traders</li>
-    <li>Available on iOS & Android</li>
-  </ul>
+        <div>
+          <a class="cta" id="ios" href="#">iOS App Store</a>
+          <a class="cta" id="android" href="#">Google Play Store</a>
+        </div>
 
-  <div>
-    <a class="cta" id="ios" href="#">iOS App Store</a>
-    <a class="cta" id="android" href="#">Google Play Store</a>
+        <div class="social-share">
+          <p>Share With Your Friends:</p>
+          <a class="cta" href="https://www.facebook.com/sharer/sharer.php?u=https://simulatedcrypto.com" target="_blank">Share on Facebook</a>
+          <a class="cta" href="https://twitter.com/intent/tweet?text=Try%20TradeSimulator%20risk-free!%20https://simulatedcrypto.com" target="_blank">Share on X</a>
+        </div>
+
+        <div class="testimonial">
+          <h3>What Users Are Saying</h3>
+          <p>"This is the best way to practice trading crypto! I gained real insight without losing money." – <strong>Jamie L.</strong></p>
+          <p>"The copy trade feature lets me learn from pros while simulating trades. Love it!" – <strong>Alex W.</strong></p>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="social-share">
-    <p>Share With Your Friends:</p>
-    <a class="cta" href="https://www.facebook.com/sharer/sharer.php?u=https://simulatedcrypto.com" target="_blank">Share on Facebook</a>
-    <a class="cta" href="https://twitter.com/intent/tweet?text=Try%20TradeSimulator%20risk-free!%20https://simulatedcrypto.com" target="_blank">Share on X</a>
-  </div>
+  <footer>
+    <p>&copy; <span id="year"></span> TradeSimulator. All rights reserved.</p>
+    <a href="#" onclick="bookmarkPage()">Bookmark This Page</a>
+  </footer>
 
-  <div class="testimonial">
-    <h3>What Users Are Saying</h3>
-    <p>"This is the best way to practice trading crypto! I gained real insight without losing money." – <strong>Jamie L.</strong></p>
-    <p>"The copy trade feature lets me learn from pros while simulating trades. Love it!" – <strong>Alex W.</strong></p>
-  </div>
-</div>
+  <!-- Sticky CTA -->
+  <a href="#" class="sticky-cta" id="sticky-download">Download App</a>
 
-<a class="sticky-download" href="#">Start Free Trading</a>
+  <script>
+    document.getElementById("timestamp").textContent = new Date().toLocaleString();
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-<footer>
-  <p>&copy; <span id="year"></span> TradeSimulator. All rights reserved.</p>
-  <a href="#" onclick="bookmarkPage()">Bookmark This Page</a>
-</footer>
-
-<script>
-  // Timestamp
-  document.getElementById("timestamp").textContent = new Date().toLocaleString();
-
-  // Dark Mode
-  function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-  }
-
-  // Year
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  // Bookmark
-  function bookmarkPage() {
-    const title = document.title;
-    const url = window.location.href;
-    if (window.sidebar && window.sidebar.addPanel) {
-      window.sidebar.addPanel(title, url, "");
-    } else if (window.external && "AddFavorite" in window.external) {
-      window.external.AddFavorite(url, title);
-    } else {
-      alert("Press Ctrl+D (or Cmd+D on Mac) to bookmark this page.");
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
     }
-  }
 
-  // Click Tracking
-  document.querySelectorAll('.cta').forEach(button => {
-    button.addEventListener('click', function () {
-      gtag('event', 'click', {
-        'event_category': 'CTA',
-        'event_label': this.id || this.textContent.trim(),
-        'value': 1
-      });
-    });
-  });
-
-  // Keyword Injection
-  window.onload = function () {
-    let ref = document.referrer;
-    if (ref.includes("google.") || ref.includes("bing.") || ref.includes("yahoo.")) {
-      try {
-        let q = new URL(ref).searchParams.get("q");
-        if (q) {
-          let metaTag = document.querySelector("meta[name='keywords']");
-          let current = metaTag.content;
-          if (!current.includes(q)) {
-            metaTag.content += `, ${q}`;
-          }
-        }
-      } catch (e) {
-        console.error("Keyword injection failed.", e);
+    function bookmarkPage() {
+      const title = document.title;
+      const url = window.location.href;
+      if (window.sidebar && window.sidebar.addPanel) {
+        window.sidebar.addPanel(title, url, "");
+      } else if (window.external && ("AddFavorite" in window.external)) {
+        window.external.AddFavorite(url, title);
+      } else {
+        alert("Press Ctrl+D (or Cmd+D on Mac) to bookmark this page.");
       }
     }
-  };
-</script>
 
+    document.querySelectorAll('.cta, .sticky-cta').forEach(button => {
+      button.addEventListener('click', function () {
+        gtag('event', 'click', {
+          'event_category': 'CTA',
+          'event_label': this.id || this.textContent.trim(),
+          'value': 1
+        });
+      });
+    });
+
+    window.onload = function () {
+      let ref = document.referrer;
+      if (ref.includes("google.") || ref.includes("bing.") || ref.includes("yahoo.")) {
+        try {
+          let q = new URL(ref).searchParams.get("q");
+          if (q) {
+            let metaTag = document.querySelector("meta[name='keywords']");
+            let current = metaTag.content;
+            if (!current.includes(q)) {
+              metaTag.content += `, ${q}`;
+            }
+          }
+        } catch (e) {
+          console.error("Keyword injection failed.", e);
+        }
+      }
+    }
+  </script>
 </body>
 </html>
