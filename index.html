@@ -13,7 +13,6 @@
   <meta property="og:url" content="https://simulatedcrypto.com" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ7CZ715ZY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -52,7 +51,6 @@
       top: 10px;
       right: 20px;
     }
-
     .iphone-wrapper {
       width: 360px;
       margin: 30px auto;
@@ -62,7 +60,6 @@
       background: #111;
       box-shadow: 0 0 40px rgba(0,0,0,0.3);
     }
-
     .iphone-notch {
       width: 150px;
       height: 30px;
@@ -74,29 +71,28 @@
       transform: translateX(-50%);
       z-index: 2;
     }
-
     .iphone-screen {
       width: 100%;
-      height: 100%;
+      height: 640px;
       border-radius: 30px;
-      overflow: hidden;
+      overflow-y: auto;
       background: #fff;
+      scroll-behavior: smooth;
     }
-
     .dark-mode .iphone-screen {
       background: #1c1c1c;
     }
-
+    .iphone-screen::-webkit-scrollbar {
+      width: 0;
+    }
     .screen-content {
       padding: 20px;
       box-sizing: border-box;
       color: inherit;
     }
-
     h1, h2, h3 {
       color: #4caf50;
     }
-
     ul {
       text-align: left;
       padding-left: 0;
@@ -108,9 +104,9 @@
       text-indent: -1.2em;
     }
     ul li::before {
-      content: "✅ ";
+      content: "\2714 ";
+      color: #4caf50;
     }
-
     .cta {
       display: inline-block;
       margin: 10px;
@@ -125,45 +121,41 @@
     .cta:hover {
       background: #45a049;
     }
-
-    .sticky-cta {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #4caf50;
-      color: white;
-      padding: 15px 20px;
-      border-radius: 30px;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      z-index: 999;
-    }
-    .sticky-cta:hover {
-      background-color: #45a049;
-    }
-
     .social-share {
       margin-top: 20px;
     }
-
     .testimonial {
       background: #e8f5e9;
+      color: #333;
       padding: 15px;
       border-radius: 8px;
       margin-top: 15px;
     }
-    
     .dark-mode .testimonial {
-  background: #1e1e1e;
-  color: #f1f1f1;
-}
-
+      background: #2a2a2a;
+      color: #fff;
+    }
     footer {
       background: #333;
       color: white;
       padding: 15px;
       margin-top: 30px;
+    }
+    .sticky-cta {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      background: #4caf50;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .sticky-cta:hover {
+      background: #45a049;
     }
   </style>
 </head>
@@ -189,18 +181,15 @@
           <li>Beginner-friendly for new traders</li>
           <li>Available on iOS & Android</li>
         </ul>
-
         <div>
           <a class="cta" id="ios" href="#">iOS App Store</a>
           <a class="cta" id="android" href="#">Google Play Store</a>
         </div>
-
         <div class="social-share">
           <p>Share With Your Friends:</p>
           <a class="cta" href="https://www.facebook.com/sharer/sharer.php?u=https://simulatedcrypto.com" target="_blank">Share on Facebook</a>
           <a class="cta" href="https://twitter.com/intent/tweet?text=Try%20TradeSimulator%20risk-free!%20https://simulatedcrypto.com" target="_blank">Share on X</a>
         </div>
-
         <div class="testimonial">
           <h3>What Users Are Saying</h3>
           <p>"This is the best way to practice trading crypto! I gained real insight without losing money." – <strong>Jamie L.</strong></p>
@@ -210,13 +199,12 @@
     </div>
   </div>
 
+  <a class="sticky-cta" href="#">Download App</a>
+
   <footer>
     <p>&copy; <span id="year"></span> TradeSimulator. All rights reserved.</p>
     <a href="#" onclick="bookmarkPage()">Bookmark This Page</a>
   </footer>
-
-  <!-- Sticky CTA -->
-  <a href="#" class="sticky-cta" id="sticky-download">Download App</a>
 
   <script>
     document.getElementById("timestamp").textContent = new Date().toLocaleString();
@@ -238,7 +226,7 @@
       }
     }
 
-    document.querySelectorAll('.cta, .sticky-cta').forEach(button => {
+    document.querySelectorAll('.cta').forEach(button => {
       button.addEventListener('click', function () {
         gtag('event', 'click', {
           'event_category': 'CTA',
