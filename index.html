@@ -2,177 +2,263 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Download TradeSimulator - Crypto Trading Practice App</title>
-  <meta name="description" content="TradeSimulator lets you practice cryptocurrency trading with real-time data. Copy expert traders, manage a virtual portfolio, and grow skills without risk." />
-  <meta name="keywords" content="crypto trading simulator, virtual crypto trading, copy trading, practice bitcoin, learn crypto" />
-  <meta property="og:title" content="Download TradeSimulator" />
-  <meta property="og:description" content="Master crypto trading risk-free. Simulate real-time trades, track PnL, and test your strategies." />
-  <meta property="og:image" content="https://simulatedcrypto.com/images/preview.webp" />
-  <meta property="og:url" content="https://simulatedcrypto.com" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f5f5f5;
-      color: #333;
-      text-align: center;
-      transition: background 0.3s, color 0.3s;
-    }
-    body.dark-mode {
-      background: #121212;
-      color: #ddd;
-    }
-    header {
-      background: #2e7d32;
-      color: #fff;
-      padding: 20px;
-    }
-    .timestamp {
-      font-size: 0.9em;
-      margin-bottom: 10px;
-    }
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    .dark-mode .container {
-      background: #1e1e1e;
-    }
-    ul, ol {
-      text-align: left;
-      padding-left: 20px;
-    }
-    .cta {
-      background: #4caf50;
-      color: #fff;
-      padding: 12px 20px;
-      margin: 10px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .cta:hover {
-      background: #43a047;
-    }
-    .social-share {
-      margin: 20px 0;
-    }
-    footer {
-      background: #333;
-      color: #fff;
-      padding: 10px;
-      margin-top: 40px;
-    }
-    .dark-toggle {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-    }
-    .sticky-cta {
-      position: fixed;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1000;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Download TradeSimulator – Master Crypto Trading Risk-Free</title>
+  <meta name="description" content="Master crypto trading risk-free with TradeSimulator. Practice live trading, copy professionals, and track PnL. Available on iOS & Android.">
+  <meta name="keywords" content="crypto trading simulator, virtual crypto trading, copy trading, risk-free trading, crypto learning app">
+  <meta name="author" content="TradeSimulator Team">
+  <meta property="og:title" content="TradeSimulator – Crypto Trading Practice App">
+  <meta property="og:description" content="Simulate crypto trading in real-time without risk. Track, learn, and master strategies on iOS and Android.">
+  <meta property="og:image" content="https://simulatedcrypto.com/images/preview.webp">
+  <meta property="og:url" content="https://simulatedcrypto.com">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ7CZ715ZY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-VQ7CZ715ZY');
-
-    document.addEventListener("DOMContentLoaded", function() {
-      document.querySelectorAll('.cta, .share-btn').forEach(el => {
-        el.addEventListener('click', function() {
-          gtag('event', 'click', {
-            event_category: 'engagement',
-            event_label: this.id || this.textContent,
-            value: 1
-          });
-        });
-      });
-      let ref = document.referrer;
-      if (ref.includes("google.") || ref.includes("bing.") || ref.includes("yahoo.")) {
-        let q = new URL(ref).searchParams.get("q");
-        if (q) {
-          let meta = document.querySelector('meta[name="keywords"]');
-          if (meta) meta.content += ", " + q;
-        }
-      }
-    });
-
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
   </script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      text-align: center;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #fff;
+    }
+
+    .dark-mode .container, .dark-mode .testimonial {
+      background: #1e1e1e;
+      color: #fff;
+    }
+
+    header {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px;
+      position: relative;
+    }
+
+    .time-meta {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-size: 14px;
+    }
+
+    .dark-toggle {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .phone-frame {
+      border: 12px solid #333;
+      border-radius: 40px;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 30px rgba(0,0,0,0.2);
+    }
+
+    .dark-mode .phone-frame {
+      background: #000;
+      color: #fff;
+    }
+
+    h1, h2 {
+      color: #4caf50;
+    }
+
+    ul {
+      text-align: left;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    ul li {
+      margin: 10px 0;
+      padding-left: 1.2em;
+      text-indent: -1.2em;
+    }
+
+    ul li::before {
+      content: "✅ ";
+    }
+
+    .cta {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 20px;
+      background: #4caf50;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .cta:hover {
+      background: #45a049;
+    }
+
+    .sticky-download {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      z-index: 999;
+      background: #4caf50;
+      color: #fff;
+      padding: 12px 16px;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      font-weight: bold;
+    }
+
+    .social-share {
+      margin-top: 20px;
+    }
+
+    .testimonial {
+      background: #e8f5e9;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <button class="cta dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
-  <header>
-    <h1>Download TradeSimulator Now</h1>
-    <p class="timestamp">Master cryptocurrency trading risk-free with real-time data.<br><script>document.write(new Date().toLocaleString());</script> – <a href="#" onclick="alert('Bookmark this page using your browser!')">Bookmark This Page</a></p>
-  </header>
+<header>
+  <div class="time-meta" id="timestamp"></div>
+  <button class="dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <h1>Download TradeSimulator Now</h1>
+  <p>Master cryptocurrency trading risk-free with live data</p>
+</header>
 
-  <div class="container">
-    <h2>Why Download TradeSimulator?</h2>
-    <ul>
-      <li>✅ Simulate real-time crypto trading with live prices</li>
-      <li>✅ Copy traders on Ethereum, BSC, and Solana chains</li>
-      <li>✅ Track your portfolio performance and PnL</li>
-      <li>✅ Test strategies without real money or risk</li>
-      <li>✅ Watch ads or upgrade for more virtual funds</li>
-      <li>✅ Beginner-friendly for new traders</li>
-      <li>✅ Available on iOS & Android</li>
-    </ul>
+<div class="container phone-frame">
+  <h2>Why Download TradeSimulator?</h2>
+  <ul>
+    <li>Simulate real-time crypto trading with live market prices</li>
+    <li>Copy professional traders on Ethereum, BSC, and Solana chains</li>
+    <li>Track your portfolio performance and PnL</li>
+    <li>Test strategies without real money or risk</li>
+    <li>Watch ads or upgrade for more virtual funds</li>
+    <li>Beginner-friendly for new traders</li>
+    <li>Available on iOS & Android</li>
+  </ul>
 
-    <h3>Available Now:</h3>
-    <a class="cta" href="#" id="ios-download">iOS App Store</a>
-    <a class="cta" href="#" id="android-download">Google Play Store</a>
-
-    <div class="social-share">
-      <p><strong>Share With Friends:</strong></p>
-      <a class="cta share-btn" id="fb-share" href="https://www.facebook.com/sharer/sharer.php?u=https://simulatedcrypto.com" target="_blank">Share on Facebook</a>
-      <a class="cta share-btn" id="x-share" href="https://twitter.com/intent/tweet?text=Try+TradeSimulator%3A+Crypto+Trading+Practice+App!&url=https://simulatedcrypto.com" target="_blank">Share on X (Twitter)</a>
-    </div>
-
-    <h3>How It Works</h3>
-    <ol>
-      <li>📥 Download the app and create your profile</li>
-      <li>📊 Choose your preferred traders or assets</li>
-      <li>💰 Simulate trades using live market conditions</li>
-      <li>📈 Watch your virtual portfolio grow</li>
-    </ol>
-
-    <h3>User Reviews</h3>
-    <p>“I learned more in 2 weeks using TradeSimulator than 6 months on YouTube.” – <strong>Alex T.</strong></p>
-    <p>“Finally a fun way to test strategies without losing money!” – <strong>Jessica M.</strong></p>
-
-    <h3>FAQs</h3>
-    <ul>
-      <li><strong>Does this use real money?</strong> No, it’s 100% simulated!</li>
-      <li><strong>Can I track real trader strategies?</strong> Yes – on Ethereum, BSC, and Solana chains.</li>
-      <li><strong>What if I run out of funds?</strong> Watch ads or upgrade to refill.</li>
-    </ul>
+  <div>
+    <a class="cta" id="ios" href="#">iOS App Store</a>
+    <a class="cta" id="android" href="#">Google Play Store</a>
   </div>
 
-  <div class="sticky-cta">
-    <a class="cta" href="#" id="sticky-download">Start Trading Now</a>
+  <div class="social-share">
+    <p>Share With Your Friends:</p>
+    <a class="cta" href="https://www.facebook.com/sharer/sharer.php?u=https://simulatedcrypto.com" target="_blank">Share on Facebook</a>
+    <a class="cta" href="https://twitter.com/intent/tweet?text=Try%20TradeSimulator%20risk-free!%20https://simulatedcrypto.com" target="_blank">Share on X</a>
   </div>
 
-  <footer>
-    <p>&copy; <script>document.write(new Date().getFullYear());</script> TradeSimulator. All rights reserved.</p>
-  </footer>
+  <div class="testimonial">
+    <h3>What Users Are Saying</h3>
+    <p>"This is the best way to practice trading crypto! I gained real insight without losing money." – <strong>Jamie L.</strong></p>
+    <p>"The copy trade feature lets me learn from pros while simulating trades. Love it!" – <strong>Alex W.</strong></p>
+  </div>
+</div>
+
+<a class="sticky-download" href="#">Start Free Trading</a>
+
+<footer>
+  <p>&copy; <span id="year"></span> TradeSimulator. All rights reserved.</p>
+  <a href="#" onclick="bookmarkPage()">Bookmark This Page</a>
+</footer>
+
+<script>
+  // Timestamp
+  document.getElementById("timestamp").textContent = new Date().toLocaleString();
+
+  // Dark Mode
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+  }
+
+  // Year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Bookmark
+  function bookmarkPage() {
+    const title = document.title;
+    const url = window.location.href;
+    if (window.sidebar && window.sidebar.addPanel) {
+      window.sidebar.addPanel(title, url, "");
+    } else if (window.external && "AddFavorite" in window.external) {
+      window.external.AddFavorite(url, title);
+    } else {
+      alert("Press Ctrl+D (or Cmd+D on Mac) to bookmark this page.");
+    }
+  }
+
+  // Click Tracking
+  document.querySelectorAll('.cta').forEach(button => {
+    button.addEventListener('click', function () {
+      gtag('event', 'click', {
+        'event_category': 'CTA',
+        'event_label': this.id || this.textContent.trim(),
+        'value': 1
+      });
+    });
+  });
+
+  // Keyword Injection
+  window.onload = function () {
+    let ref = document.referrer;
+    if (ref.includes("google.") || ref.includes("bing.") || ref.includes("yahoo.")) {
+      try {
+        let q = new URL(ref).searchParams.get("q");
+        if (q) {
+          let metaTag = document.querySelector("meta[name='keywords']");
+          let current = metaTag.content;
+          if (!current.includes(q)) {
+            metaTag.content += `, ${q}`;
+          }
+        }
+      } catch (e) {
+        console.error("Keyword injection failed.", e);
+      }
+    }
+  };
+</script>
+
 </body>
 </html>
