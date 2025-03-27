@@ -1,130 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download TradeSimulator - Master Crypto Trading Without Risk</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download TradeSimulator - Crypto Trading Practice App</title>
+  <meta name="description" content="TradeSimulator lets you practice cryptocurrency trading with real-time data. Copy expert traders, manage a virtual portfolio, and grow skills without risk." />
+  <meta name="keywords" content="crypto trading simulator, virtual crypto trading, copy trading, practice bitcoin, learn crypto" />
+  <meta property="og:title" content="Download TradeSimulator" />
+  <meta property="og:description" content="Master crypto trading risk-free. Simulate real-time trades, track PnL, and test your strategies." />
+  <meta property="og:image" content="https://simulatedcrypto.com/images/preview.webp" />
+  <meta property="og:url" content="https://simulatedcrypto.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f5f5f5;
+      color: #333;
+      text-align: center;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background: #121212;
+      color: #ddd;
+    }
+    header {
+      background: #2e7d32;
+      color: #fff;
+      padding: 20px;
+    }
+    .timestamp {
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .dark-mode .container {
+      background: #1e1e1e;
+    }
+    ul, ol {
+      text-align: left;
+      padding-left: 20px;
+    }
+    .cta {
+      background: #4caf50;
+      color: #fff;
+      padding: 12px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .cta:hover {
+      background: #43a047;
+    }
+    .social-share {
+      margin: 20px 0;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 10px;
+      margin-top: 40px;
+    }
+    .dark-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+    }
+    .sticky-cta {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+    }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ7CZ715ZY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-VQ7CZ715ZY');
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Download TradeSimulator to learn and master cryptocurrency trading with real-time data, portfolio tracking, and copy trading—risk-free!">
-    <meta name="keywords" content="crypto trading app, virtual crypto trading, bitcoin simulator, copy trading, trade crypto risk free, TradeSimulator">
-    <meta name="author" content="TradeSimulator Team">
-    <meta property="og:title" content="TradeSimulator - Master Crypto Trading Without Risk">
-    <meta property="og:description" content="Get the app to trade cryptocurrencies virtually with real-time prices and expert strategy tracking.">
-    <meta property="og:image" content="https://simulatedcrypto.com/images/preview.webp">
-    <meta property="og:url" content="https://simulatedcrypto.com">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ7CZ715ZY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-VQ7CZ715ZY');
-
-        // Track CTA button clicks
-        document.addEventListener("DOMContentLoaded", function() {
-            document.querySelectorAll(".cta").forEach(button => {
-                button.addEventListener("click", function() {
-                    gtag('event', 'click', {
-                        'event_category': 'CTA',
-                        'event_label': this.id,
-                        'value': 1
-                    });
-                });
-            });
-
-            // Add search keywords to meta tag
-            let referrer = document.referrer;
-            let searchKeywords = "";
-            if (referrer.includes("google.") || referrer.includes("bing.") || referrer.includes("yahoo.")) {
-                try {
-                    let urlParams = new URL(referrer).searchParams;
-                    searchKeywords = urlParams.get("q");
-                    if (searchKeywords) {
-                        let meta = document.querySelector('meta[name="keywords"]');
-                        if (meta) {
-                            meta.content += ", " + searchKeywords;
-                        }
-                    }
-                } catch (e) {}
-            }
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll('.cta, .share-btn').forEach(el => {
+        el.addEventListener('click', function() {
+          gtag('event', 'click', {
+            event_category: 'engagement',
+            event_label: this.id || this.textContent,
+            value: 1
+          });
         });
-    </script>
+      });
+      let ref = document.referrer;
+      if (ref.includes("google.") || ref.includes("bing.") || ref.includes("yahoo.")) {
+        let q = new URL(ref).searchParams.get("q");
+        if (q) {
+          let meta = document.querySelector('meta[name="keywords"]');
+          if (meta) meta.content += ", " + q;
+        }
+      }
+    });
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-        }
-        header {
-            background-color: #4caf50;
-            color: white;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .cta {
-            display: inline-block;
-            background-color: #4caf50;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 5px;
-            font-size: 18px;
-            margin-top: 20px;
-            text-decoration: none;
-        }
-        .cta:hover {
-            background-color: #45a049;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            margin-top: 20px;
-        }
-    </style>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </head>
 <body>
-    <header>
-        <h1>Download TradeSimulator Now</h1>
-        <p>Master cryptocurrency trading risk-free with our virtual simulator and live market data.</p>
-        <small><script>document.write(new Date().toLocaleString());</script> - <a href="#" onclick="window.external && window.external.AddFavorite ? window.external.AddFavorite(location.href, document.title) : alert('Use Ctrl+D to bookmark this page.')">Bookmark This Page</a></small>
-    </header>
+  <button class="cta dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
-    <div class="container">
-        <h2>Why Download TradeSimulator?</h2>
-        <ul style="text-align: left;">
-            <li>✅ Simulate real-time crypto trading with live market prices</li>
-            <li>✅ Copy professional traders on Ethereum, BSC, and Solana chains</li>
-            <li>✅ Track your portfolio performance and PnL</li>
-            <li>✅ Test strategies without real money or risk</li>
-            <li>✅ Watch ads or upgrade for more virtual funds</li>
-            <li>✅ Beginner-friendly for new traders</li>
-            <li>✅ Available on iOS & Android</li>
-        </ul>
+  <header>
+    <h1>Download TradeSimulator Now</h1>
+    <p class="timestamp">Master cryptocurrency trading risk-free with real-time data.<br><script>document.write(new Date().toLocaleString());</script> – <a href="#" onclick="alert('Bookmark this page using your browser!')">Bookmark This Page</a></p>
+  </header>
 
-        <p>Available now on:</p>
-        <a class="cta" id="download-ios" href="#">iOS App Store</a>
-        <a class="cta" id="download-android" href="#">Google Play Store</a>
+  <div class="container">
+    <h2>Why Download TradeSimulator?</h2>
+    <ul>
+      <li>✅ Simulate real-time crypto trading with live prices</li>
+      <li>✅ Copy traders on Ethereum, BSC, and Solana chains</li>
+      <li>✅ Track your portfolio performance and PnL</li>
+      <li>✅ Test strategies without real money or risk</li>
+      <li>✅ Watch ads or upgrade for more virtual funds</li>
+      <li>✅ Beginner-friendly for new traders</li>
+      <li>✅ Available on iOS & Android</li>
+    </ul>
 
-        <h3>Share With Your Friends:</h3>
-        <a class="cta" href="https://www.facebook.com/sharer/sharer.php?u=https://simulatedcrypto.com" target="_blank">Share on Facebook</a>
+    <h3>Available Now:</h3>
+    <a class="cta" href="#" id="ios-download">iOS App Store</a>
+    <a class="cta" href="#" id="android-download">Google Play Store</a>
+
+    <div class="social-share">
+      <p><strong>Share With Friends:</strong></p>
+      <a class="cta share-btn" id="fb-share" href="https://www.facebook.com/sharer/sharer.php?u=https://simulatedcrypto.com" target="_blank">Share on Facebook</a>
+      <a class="cta share-btn" id="x-share" href="https://twitter.com/intent/tweet?text=Try+TradeSimulator%3A+Crypto+Trading+Practice+App!&url=https://simulatedcrypto.com" target="_blank">Share on X (Twitter)</a>
     </div>
 
-    <footer>
-        <p>&copy; <script>document.write(new Date().getFullYear());</script> TradeSimulator. All rights reserved.</p>
-    </footer>
+    <h3>How It Works</h3>
+    <ol>
+      <li>📥 Download the app and create your profile</li>
+      <li>📊 Choose your preferred traders or assets</li>
+      <li>💰 Simulate trades using live market conditions</li>
+      <li>📈 Watch your virtual portfolio grow</li>
+    </ol>
+
+    <h3>User Reviews</h3>
+    <p>“I learned more in 2 weeks using TradeSimulator than 6 months on YouTube.” – <strong>Alex T.</strong></p>
+    <p>“Finally a fun way to test strategies without losing money!” – <strong>Jessica M.</strong></p>
+
+    <h3>FAQs</h3>
+    <ul>
+      <li><strong>Does this use real money?</strong> No, it’s 100% simulated!</li>
+      <li><strong>Can I track real trader strategies?</strong> Yes – on Ethereum, BSC, and Solana chains.</li>
+      <li><strong>What if I run out of funds?</strong> Watch ads or upgrade to refill.</li>
+    </ul>
+  </div>
+
+  <div class="sticky-cta">
+    <a class="cta" href="#" id="sticky-download">Start Trading Now</a>
+  </div>
+
+  <footer>
+    <p>&copy; <script>document.write(new Date().getFullYear());</script> TradeSimulator. All rights reserved.</p>
+  </footer>
 </body>
 </html>
