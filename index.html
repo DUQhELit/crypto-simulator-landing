@@ -3,19 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Download TradeSimulator – Master Crypto Trading Risk-Free</title>
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Master crypto trading risk-free with TradeSimulator. Practice live trading, copy professionals, and track PnL. Available on iOS & Android." />
-  <meta name="keywords" content="crypto trading simulator, virtual crypto trading, copy trading, risk-free trading, crypto learning app" />
+  <title>Trade Simulator – Crypto Copy Trading App</title>
+  <meta name="description" content="The most intuitive cryptocurrency copy trading simulator. Practice trading, follow top strategies, and master crypto without risking real money." />
+  <meta name="keywords" content="crypto trading simulator, copy trading, virtual trading, practice crypto" />
   <meta name="author" content="TradeSimulator Team" />
-  <meta property="og:title" content="TradeSimulator – Crypto Trading Practice App" />
-  <meta property="og:description" content="Simulate crypto trading in real-time without risk. Track, learn, and master strategies on iOS and Android." />
-  <meta property="og:image" content="https://simulatedcrypto.com/images/preview.webp" />
-  <meta property="og:url" content="https://simulatedcrypto.com" />
+  <meta property="og:title" content="Trade Simulator – Crypto Copy Trading App" />
+  <meta property="og:description" content="Simulate trading, copy pros, and practice with zero risk. Available on iOS." />
+  <meta property="og:url" content="https://apps.apple.com/us/app/copy-trader-simulator/id6746201951" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics (optional, example only) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ7CZ715ZY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -24,299 +21,171 @@
     gtag('config', 'G-VQ7CZ715ZY');
   </script>
 
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "qqbejd9doc");
-  </script>
-
   <style>
-    /* [Same CSS as before – no change] */
     body {
+      background: #f7f8fa;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      color: #232323;
+    }
+    .header {
       text-align: center;
+      margin-top: 16px;
     }
-    .dark-mode {
-      background-color: #121212;
-      color: #fff;
+    .header h1 {
+      font-size: 2.4rem;
+      margin: 0 0 10px 0;
     }
-    header {
-      background-color: #4caf50;
-      color: white;
-      padding: 10px;
-      position: relative;
+    .header p {
+      margin: 0 0 32px 0;
+      font-size: 1.15rem;
+      color: #444;
     }
-    .time-meta {
-      position: absolute;
-      top: 10px;
-      left: 20px;
-      font-size: 14px;
-    }
-    .dark-toggle {
-      position: absolute;
-      top: 10px;
-      right: 20px;
-    }
-    .content-flex {
+    .screenshots-row {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
-      padding: 30px;
-      align-items: flex-start;
+      gap: 32px;
+      margin: 30px 0 40px 0;
     }
-    .seo-text {
-      flex: 1 1 300px;
-      max-width: 350px;
-      font-size: 15px;
-      line-height: 1.6;
-      color: #333;
-      text-align: left;
-    }
-    .dark-mode .seo-text {
-      color: #ddd;
-    }
-    .seo-text h2, .seo-text h3 {
-      color: #4caf50;
-      margin-top: 0;
-    }
-    .iphone-wrapper {
-      width: 430px;
-      height: 932px;
-      border: 16px solid #333;
-      border-radius: 60px;
-      position: relative;
-      background: #111;
-      box-shadow: 0 0 40px rgba(0,0,0,0.3);
-    }
-    .iphone-notch {
-      width: 200px;
-      height: 35px;
-      background: #333;
-      border-radius: 0 0 30px 30px;
-      position: absolute;
-      top: -16px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-    }
-    .iphone-screen {
-      width: 100%;
-      height: 100%;
-      border-radius: 44px;
-      overflow-y: auto;
-      background: #fff;
-    }
-    .dark-mode .iphone-screen {
-      background: #1c1c1c;
-    }
-    .screen-content {
-      padding: 20px;
-      color: inherit;
-    }
-    h1, h2, h3 {
-      color: #4caf50;
-    }
-    ul {
-      text-align: left;
-      padding-left: 0;
-      list-style: none;
-    }
-    ul li {
-      margin: 10px 0;
-      padding-left: 1.2em;
-      text-indent: -1.2em;
-    }
-    ul li::before {
-      content: "✔️ ";
-    }
-    .cta {
-      display: inline-block;
-      margin: 10px;
-      padding: 15px 20px;
-      background: #4caf50;
-      color: white;
+    .screenshot-card {
+      background: #232323;
+      border-radius: 36px;
+      width: 240px;
+      min-height: 410px;
+      max-width: 95vw;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
+      color: #fff;
+      transition: box-shadow 0.18s;
+      position: relative;
+      overflow: hidden;
     }
-    .cta:hover {
-      background: #45a049;
-    }
-    .social-share {
-      margin-top: 20px;
-    }
-    .testimonial {
-      background: #e8f5e9;
-      padding: 15px;
-      border-radius: 8px;
-      margin-top: 15px;
-    }
-    .dark-mode .testimonial {
-      background: #2e2e2e;
-    }
-    footer {
+    .screenshot-card:hover {
+      box-shadow: 0 8px 32px rgba(44, 200, 98, 0.16);
       background: #333;
-      color: white;
-      padding: 15px;
-      margin-top: 30px;
     }
-    .sticky-cta {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #4caf50;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 25px;
+    .card-title {
+      font-size: 1.09rem;
+      font-weight: 600;
+      margin: 18px 0 6px 0;
+      letter-spacing: 0.03em;
+      color: #36d170;
+    }
+    .chart-placeholder {
+      width: 85%;
+      height: 100px;
+      margin: 18px auto 0 auto;
+      display: block;
+      background: transparent;
+    }
+    .leaderboard {
+      width: 90%;
+      margin: 12px auto;
+      font-size: 0.97rem;
+    }
+    .leaderboard th, .leaderboard td {
+      padding: 5px 7px;
+      text-align: left;
+      color: #eaffea;
+    }
+    .leaderboard th {
+      color: #2ee99b;
       font-weight: bold;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      z-index: 9999;
+      font-size: 1em;
+      border-bottom: 1px solid #30d68a;
     }
-    @media (max-width: 1024px) {
-      .content-flex {
-        flex-direction: column;
-        align-items: center;
-      }
-      .seo-text {
-        max-width: 90%;
-        text-align: center;
-      }
+    .trade-history {
+      width: 90%;
+      margin: 12px auto 2px auto;
+      font-size: 0.96rem;
+    }
+    .trade-history th, .trade-history td {
+      padding: 5px 7px;
+      text-align: left;
+      color: #ffe;
+    }
+    .trade-history th {
+      color: #83f6be;
+      font-size: 1em;
+      border-bottom: 1px solid #46eab8;
+    }
+    .cta-btn {
+      display: block;
+      margin: 24px auto 36px auto;
+      background: #23c16b;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 22px;
+      padding: 13px 30px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 2px 12px rgba(35,193,107,0.16);
+      transition: background 0.16s;
+    }
+    .cta-btn:hover {
+      background: #14a555;
+    }
+    @media (max-width: 900px) {
+      .screenshots-row { flex-direction: column; gap: 30px; align-items: center;}
     }
   </style>
 </head>
-
 <body>
-  <header>
-    <div class="time-meta" id="timestamp"></div>
-    <button class="dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-    <h1>Download TradeSimulator Now</h1>
-    <p>Master cryptocurrency trading risk-free with live data</p>
-  </header>
-
-  <div class="content-flex">
-    <div class="seo-text left">
-      <h2>Crypto Trading Simulator for Beginners</h2>
-      <p>SimulatedCrypto.com lets you explore live market trading without risk. Use our crypto simulator to master strategies, track performance, and practice like the pros — all without spending real money. Ideal for those new to cryptocurrency.</p>
-      <h3>Practice Bitcoin, Ethereum & Altcoins</h3>
-      <p>Test trade Bitcoin (BTC), Ethereum (ETH), and popular altcoins using real-time market data. Our simulator mimics actual market conditions so you can build confidence and refine your techniques before investing real funds.</p>
-    </div>
-
-    <div class="iphone-wrapper">
-      <div class="iphone-notch"></div>
-      <div class="iphone-screen">
-        <div class="screen-content">
-          <h2>Why Download TradeSimulator?</h2>
-          <ul>
-            <li>Simulate real-time crypto trading with live market prices</li>
-            <li>Copy professional traders on Ethereum, BSC, and Solana chains</li>
-            <li>Track your portfolio performance and PnL</li>
-            <li>Test strategies without real money or risk</li>
-            <li>Watch ads or upgrade for more virtual funds</li>
-            <li>Beginner-friendly for new traders</li>
-            <li>Available on iOS & Android</li>
-          </ul>
-          <div>
-            <a class="cta" id="ios" href="https://apps.apple.com/us/app/copy-trader-simulator/id6746201951" target="_blank">iOS App Store</a>
-            <a class="cta" id="android" href="#">Google Play Store</a>
-          </div>
-          <div class="social-share">
-            <p>Share With Your Friends:</p>
-            <a class="cta" href="https://www.facebook.com/sharer/sharer.php?u=https://simulatedcrypto.com" target="_blank">Share on Facebook</a>
-            <a class="cta" href="https://twitter.com/intent/tweet?text=Try%20TradeSimulator%20risk-free!%20https://simulatedcrypto.com" target="_blank">Share on X</a>
-          </div>
-          <div class="testimonial">
-            <h3>What Users Are Saying</h3>
-            <p>"This is the best way to practice trading crypto! I gained real insight without losing money." – <strong>Jamie L.</strong></p>
-            <p>"The copy trade feature lets me learn from pros while simulating trades. Love it!" – <strong>Alex W.</strong></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="seo-text right">
-      <h2>Risk-Free Crypto Trading App</h2>
-      <p>Simulate trades on Ethereum, Solana, and Binance Smart Chain networks. Follow top-performing traders with copy trading and optimize your crypto portfolio in a safe learning environment.</p>
-      <h3>Why Choose SimulatedCrypto.com?</h3>
-      <p>Our crypto trading simulator is trusted by thousands of learners. With analytics, trade history, and customizable strategies, it’s your gateway to mastering the crypto market.</p>
-    </div>
+  <div class="header">
+    <h1>Trade Simulator</h1>
+    <p>
+      The most intuitive cryptocurrency copy trading simulator.<br>
+      Practice trading, follow top strategies, and master crypto without risking real money.
+    </p>
   </div>
 
-  <footer>
-    <p>&copy; <span id="year"></span> TradeSimulator. All rights reserved.</p>
-    <a href="#" onclick="bookmarkPage()">Bookmark This Page</a>
-  </footer>
+  <div class="screenshots-row">
+    <!-- Card 1: Portfolio Chart -->
+    <a class="screenshot-card" href="https://apps.apple.com/us/app/copy-trader-simulator/id6746201951" target="_blank">
+      <div class="card-title">Portfolio Performance</div>
+      <svg class="chart-placeholder" viewBox="0 0 240 100">
+        <polyline fill="none" stroke="#2ee99b" stroke-width="3" points="0,80 30,65 60,73 90,50 120,60 150,25 180,30 210,17 240,30"/>
+        <circle cx="0" cy="80" r="4" fill="#2ee99b"/>
+        <circle cx="60" cy="73" r="4" fill="#2ee99b"/>
+        <circle cx="120" cy="60" r="4" fill="#2ee99b"/>
+        <circle cx="180" cy="30" r="4" fill="#2ee99b"/>
+        <circle cx="240" cy="30" r="4" fill="#2ee99b"/>
+      </svg>
+      <div style="margin-top: 18px; font-size:1em;">Track simulated gains & losses over time.</div>
+    </a>
 
-  <div class="sticky-cta">
-    <a href="https://apps.apple.com/us/app/copy-trader-simulator/id6746201951" target="_blank" style="color:white; text-decoration:none;">Download App</a>
+    <!-- Card 2: Copy Trader Leaderboard -->
+    <a class="screenshot-card" href="https://apps.apple.com/us/app/copy-trader-simulator/id6746201951" target="_blank">
+      <div class="card-title">Top Copy Traders</div>
+      <table class="leaderboard">
+        <tr><th>Trader</th><th>Return</th></tr>
+        <tr><td>@CryptoAce</td><td>+38.1%</td></tr>
+        <tr><td>@BitMaster</td><td>+29.5%</td></tr>
+        <tr><td>@SolQueen</td><td>+25.7%</td></tr>
+      </table>
+      <div style="margin-top: 18px; font-size:1em;">Copy the best performers with one tap.</div>
+    </a>
+
+    <!-- Card 3: Trade History Table -->
+    <a class="screenshot-card" href="https://apps.apple.com/us/app/copy-trader-simulator/id6746201951" target="_blank">
+      <div class="card-title">Recent Trades</div>
+      <table class="trade-history">
+        <tr><th>Date</th><th>Coin</th><th>Action</th><th>PnL</th></tr>
+        <tr><td>06/01</td><td>ETH</td><td>Buy</td><td>+3.9%</td></tr>
+        <tr><td>05/31</td><td>BTC</td><td>Sell</td><td>-0.7%</td></tr>
+        <tr><td>05/29</td><td>SOL</td><td>Buy</td><td>+7.1%</td></tr>
+      </table>
+      <div style="margin-top: 18px; font-size:1em;">Monitor and analyze your practice trades.</div>
+    </a>
   </div>
 
-  <script>
-    document.getElementById("timestamp").textContent = new Date().toLocaleString();
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-    }
-
-    function bookmarkPage() {
-      const title = document.title;
-      const url = window.location.href;
-      if (window.sidebar && window.sidebar.addPanel) {
-        window.sidebar.addPanel(title, url, "");
-      } else if (window.external && ("AddFavorite" in window.external)) {
-        window.external.AddFavorite(url, title);
-      } else {
-        alert("Press Ctrl+D (or Cmd+D on Mac) to bookmark this page.");
-      }
-    }
-
-    // Global click tracking
-    document.addEventListener('click', function (e) {
-      const target = e.target.closest('a, button');
-      if (target) {
-        gtag('event', 'click', {
-          event_category: 'All Clicks',
-          event_label: target.id || target.className || target.textContent.trim() || target.href,
-          value: 1
-        });
-      }
-    });
-
-    // Keyword injection from search engine referrers
-    window.onload = function () {
-      let ref = document.referrer;
-      if (ref.includes("google.") || ref.includes("bing.") || ref.includes("yahoo.")) {
-        try {
-          let q = new URL(ref).searchParams.get("q");
-          if (q) {
-            let metaTag = document.querySelector("meta[name='keywords']");
-            if (metaTag && !metaTag.content.includes(q)) {
-              metaTag.content += `, ${q}`;
-            }
-          }
-        } catch (e) {
-          console.error("Keyword injection failed.", e);
-        }
-      }
-
-      // Auto-assign App Store URL to all relevant CTA buttons
-      const iosUrl = "https://apps.apple.com/us/app/copy-trader-simulator/id6746201951";
-      document.querySelectorAll('a.cta').forEach(btn => {
-        const text = btn.textContent.toLowerCase();
-        if (text.includes("ios") || text.includes("download")) {
-          btn.href = iosUrl;
-          btn.target = "_blank";
-        }
-      });
-    }
-  </script>
+  <a class="cta-btn" href="https://apps.apple.com/us/app/copy-trader-simulator/id6746201951" target="_blank">Download on the App Store</a>
 </body>
-</html>
+</html
